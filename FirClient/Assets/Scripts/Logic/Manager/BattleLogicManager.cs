@@ -265,7 +265,7 @@ namespace FirClient.Logic.Manager
                 if (attackEvent != null)
                 {
                     attackEvent.callback(attackEvent.defenderid);
-                    GLogger.Log("OnNpcSkillAttackOK eventid:"+ eventId + " attacker:" + attackEvent.attackerid + " defender:" + attackEvent.defenderid);
+                    FirClient.Log.Info("OnNpcSkillAttackOK eventid:"+ eventId + " attacker:" + attackEvent.attackerid + " defender:" + attackEvent.defenderid);
                 }
             }
         }

@@ -21,7 +21,7 @@ namespace FirClient.Logic.FSM.TurnBaseState
             base.Enter();
             mynpcId = npcFsm.GetVar<long>("mynpcId");
             myNpcData = npcDataMgr.GetNpcData(mynpcId.value);
-            GLogger.Red(mynpcId.value + " enter Death...");
+            FirClient.Log.Red(mynpcId.value + " enter Death...");
 
             DoNpcDeath();
         }

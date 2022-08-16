@@ -99,7 +99,7 @@ namespace FirClient.Utility
                 if (onEnter != null)
                 {
                     var loadMsg = "OnLoadLevel " + levelType + " OK!!!";
-                    onEnter.Call<LuaTable, LevelType, Action>(self, levelType, () => GLogger.Yellow(loadMsg));
+                    onEnter.Call<LuaTable, LevelType, Action>(self, levelType, () => FirClient.Log.Yellow(loadMsg));
                     onEnter.Dispose();
                     onEnter = null;
 

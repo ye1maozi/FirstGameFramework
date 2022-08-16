@@ -107,7 +107,7 @@ namespace FirClient.Logic.Manager
                 MoveNextEvent(currPos);
                 return;
             }
-            GLogger.Yellow("MoveNext evType:" + evData.type);
+            FirClient.Log.Yellow("MoveNext evType:" + evData.type);
 
             var currEvent = sceneEvents[evData.type];
             if (currEvent != null)

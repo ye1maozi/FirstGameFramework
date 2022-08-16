@@ -111,7 +111,7 @@ namespace FirClient.Manager
         private void OnBattleStart(GameEventData eventData)
         {
             var battleStartEvent = eventData.evParam as BattleStartEvent;
-            GLogger.Magenta("BattleStart----->>>" + battleStartEvent.type);
+            FirClient.Log.Magenta("BattleStart----->>>" + battleStartEvent.type);
         }
 
         /// <summary>
@@ -125,12 +125,12 @@ namespace FirClient.Manager
             {
                 Util.CallLuaMethod("LeaveDungeon", (Action)delegate ()
                 {
-                    GLogger.Red("BattleEnd---->>>" + battleType);
+                    FirClient.Log.Red("BattleEnd---->>>" + battleType);
                 });
             }
             else
             {
-                GLogger.Red("BattleEnd---->>>" + battleType);
+                FirClient.Log.Red("BattleEnd---->>>" + battleType);
             }
         }
 
@@ -208,7 +208,7 @@ namespace FirClient.Manager
                 var defender = npcMgr.GetNpc(defenderid) as RoleView;
                 if (attacker != null && defender != null)
                 {
-                    GLogger.White("OnAttackNpc:>>eventid:" + eventid + " attacker:" + attackerid + " defender:" + defenderid + " currhp:" + evBattle.currHp + " maxhp:" + evBattle.maxHp);
+                    FirClient.Log.White("OnAttackNpc:>>eventid:" + eventid + " attacker:" + attackerid + " defender:" + defenderid + " currhp:" + evBattle.currHp + " maxhp:" + evBattle.maxHp);
                     attacker.NpcSkillAttack(defender, evBattle, delegate ()
                     {
                         Messenger.Broadcast<long>(EventNames.EvNpcSkillAttackOK, eventid);

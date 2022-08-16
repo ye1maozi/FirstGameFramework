@@ -11,7 +11,7 @@ namespace FirClient.Logic.FSM
 
         public BattleFSM()
         {
-            GLogger.Cyan("Current FSM Type:" + LogicConst.BattleType);
+            FirClient.Log.Cyan("Current FSM Type:" + LogicConst.BattleType);
         }
 
         public override void AddStates()

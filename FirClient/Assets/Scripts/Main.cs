@@ -11,6 +11,8 @@ public class Main : GameBehaviour
     {
         AppConst.AppState = AppState.IsPlaying;
         base.OnAwake();
+        this.gameObject.AddComponent<FirClient.MainThreadSynchronizationContext>();
+        FirClient.Log.SetLogger(FirClient.Logger.Instance);
         this.Initialize();
     }
 

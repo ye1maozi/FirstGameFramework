@@ -71,7 +71,7 @@ namespace FirClient.Logic.FSM.TurnBaseState
             {
                 tokenNpcId.value = newTokenNpcId;
             }
-            GLogger.Purple("DispatchNpcToken----------------->>>>" + newTokenNpcId);
+            FirClient.Log.Purple("DispatchNpcToken----------------->>>>" + newTokenNpcId);
         }
 
         /// <summary>

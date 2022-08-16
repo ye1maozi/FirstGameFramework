@@ -45,7 +45,7 @@ namespace FirClient.Logic.Event
         private void OnEvMoveNpcOK(object param)
         {
             var npcid = (long)param;
-            GLogger.Green("OnEvMoveNpcOK:>" + npcid);
+            FirClient.Log.Green("OnEvMoveNpcOK:>" + npcid);
 
             var npcData = npcDataMgr.GetNpcData(npcid);
             if (npcData != null)

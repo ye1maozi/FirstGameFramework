@@ -11,17 +11,21 @@ end
 
 --输出日志--
 function _G.log(...)
-    UnityEngine.Debug.Log(formatLog(...))
+    --UnityEngine.Debug.Log(formatLog(...))
+
+	FirClient.Log.Info(formatLog(...))
 end
 
 --错误日志--
 function _G.logError(...) 
-	UnityEngine.Debug.LogError(formatLog(...))
+	--UnityEngine.Debug.LogError(formatLog(...))
+	FirClient.Log.Error(formatLog(...))
 end
 
 --警告日志--
 function _G.logWarn(...) 
-	UnityEngine.Debug.LogWarning(formatLog(...))
+	--UnityEngine.Debug.LogWarning(formatLog(...))
+	FirClient.Log.Warn(formatLog(...))
 end
 
 --查找对象--

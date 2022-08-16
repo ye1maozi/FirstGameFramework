@@ -28,7 +28,7 @@ namespace FirClient.Logic.Manager
         public void Initialize(Vector2 pos)
         {
             currPos = pos;
-            GLogger.Yellow("Initialize Battle Pos====================:>>" + pos);
+            FirClient.Log.Yellow("Initialize Battle Pos====================:>>" + pos);
             embattlePosMgr.Initialize(pos);
         }
 
@@ -136,7 +136,7 @@ namespace FirClient.Logic.Manager
         public void MoveNextTurn()
         {
             var teamCount = CurrHandler?.GetTeamCount();
-            GLogger.Gray("MoveNextTurn--------->>>" + teamCount);
+            FirClient.Log.Gray("MoveNextTurn--------->>>" + teamCount);
             if (teamCount == 0)
             {
                 if (npcDataMgr.IsAllNpcStateOK(NpcType.Hero, NpcState.Attack))

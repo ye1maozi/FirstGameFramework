@@ -105,7 +105,7 @@ public static class CustomSettings
         _GT(typeof(Animator)),
         _GT(typeof(Animation)),        
 		_GT(typeof(Resources)),   
-        _GT(typeof(Debug)),
+        // _GT(typeof(Debug)),
         _GT(typeof(PlayerPrefs)),
         _GT(typeof(SpriteRenderer)),
         _GT(typeof(Path)),
@@ -163,6 +163,8 @@ public static class CustomSettings
         _GT(typeof(CPrefabVar)),
         _GT(typeof(VarData)),
         _GT(typeof(TMP_InputField)),
+
+        _GT(typeof(FirClient.Log)),
     };
 
     public static List<Type> dynamicList = new List<Type>()

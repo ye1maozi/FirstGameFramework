@@ -66,7 +66,7 @@ namespace FirClient.View
                     }
                     break;
             }
-            GLogger.Log("OnPlayingClipOK::>>" + gameObject.name + " " + clip);
+            FirClient.Log.Info("OnPlayingClipOK::>>" + gameObject.name + " " + clip);
         }
 
         /// <summary>
@@ -245,7 +245,7 @@ namespace FirClient.View
             }
             else
             {
-                GLogger.Red("!!!NpcSkillAttackInternal:>>" + evData.attackerid + " " + evData.defenderid + " " + evData.bUseSkill);
+                FirClient.Log.Red("!!!NpcSkillAttackInternal:>>" + evData.attackerid + " " + evData.defenderid + " " + evData.bUseSkill);
             }
         }
 

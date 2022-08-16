@@ -218,7 +218,7 @@ namespace FirClient.Manager {
                 yield break;
             }
             m_AssetBundleLoadingList.Add(url, 1);
-            GLogger.Gray(url);
+            FirClient.Log.Gray(url);
             var abUrl = Application.isEditor ? abName : url;
             var request = AssetBundle.LoadFromFileAsync(url);
             if (abName != AppConst.ResIndexFile)
