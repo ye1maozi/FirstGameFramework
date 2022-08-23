@@ -1,3 +1,4 @@
+---@class PanelManager
 local PanelManager = class("PanelManager")
 
 function PanelManager:Initialize()

@@ -1,4 +1,5 @@
 local UIBaseCtrl = require "UIController/UIBaseCtrl"
+---@class UILoaderCtrl : UIBaseCtrl
 local UILoaderCtrl = class("UILoaderCtrl", UIBaseCtrl)
 
 local panelMgr = nil

@@ -183,7 +183,7 @@ namespace FirClient.Component
         
         [SerializeField]
         [HideInInspector]
-        public List<VarData> varData;
+        public List<VarData> varData = new List<VarData>();
 
         [SerializeField]
         [HideInInspector]

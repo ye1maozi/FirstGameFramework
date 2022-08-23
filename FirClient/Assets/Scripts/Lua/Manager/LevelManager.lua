@@ -1,3 +1,4 @@
+---@class LevelManager
 local LevelManager = class("LevelManager")
 
 function LevelManager:Initialize()
@@ -5,7 +6,9 @@ function LevelManager:Initialize()
 end
 
 function LevelManager:LoadLevel(levelType)
+	---@type CtrlManager
 	local ctrlMgr = MgrCenter:GetManager(ManagerNames.Ctrl)
+	---@type UILoaderCtrl
 	local loaderCtrl = ctrlMgr:GetCtrl(UiNames.Loader)
 	if loaderCtrl ~= nil then
 		loaderCtrl:InitLoader(function ()

@@ -50,7 +50,8 @@ end
 
 function UILoginCtrl:CheckExistCharacter()
 	local roleid = PlayerPrefs.GetInt("roleid", -1)
-	local isExistRole = roleid > -1
+	--local isExistRole = roleid > -1
+	local isExistRole = true
 	if isExistRole then
 		local roleSex = PlayerPrefs.GetInt("rolesex", -1)
 		local moduleMgr = MgrCenter:GetManager(ManagerNames.Module)

@@ -165,6 +165,7 @@ public static class CustomSettings
         _GT(typeof(TMP_InputField)),
 
         _GT(typeof(FirClient.Log)),
+        _GT(typeof(LuaMonoBehaviour)),
     };
 
     public static List<Type> dynamicList = new List<Type>()

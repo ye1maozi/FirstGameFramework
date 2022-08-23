@@ -1,3 +1,4 @@
+---@class UIBaseCtrl
 local UIBaseCtrl = class("UIBaseCtrl")
 UIBaseCtrl.gameObject = nil
 

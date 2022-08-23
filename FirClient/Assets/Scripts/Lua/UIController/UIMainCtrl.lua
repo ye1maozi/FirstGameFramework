@@ -1,4 +1,5 @@
 local UIBaseCtrl = require "UIController/UIBaseCtrl"
+---@class UIMainCtrl : UIBaseCtrl
 local UIMainCtrl = class("UIMainCtrl", UIBaseCtrl)
 
 local btnSelectImage = nil

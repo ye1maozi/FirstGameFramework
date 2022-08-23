@@ -1,3 +1,4 @@
+---@class CtrlManager
 local CtrlManager = class("CtrlManager")
 
 function CtrlManager:Initialize()

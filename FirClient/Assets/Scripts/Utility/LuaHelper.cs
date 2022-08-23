@@ -116,7 +116,31 @@ namespace FirClient.Utility
 
         public static void InitBeginPlay(uint mapid)
         {
-            Messenger.Broadcast<uint>(EventNames.EvBeginPlay, mapid);
+            // Messenger.Broadcast<uint>(EventNames.EvBeginPlay, mapid);
+        }
+
+         /// <summary>
+        /// 给游戏对象添加lua行为脚本,同时返回该脚本对象
+        /// </summary>
+        public static LuaMonoBehaviour AddLuaBehaviour (UnityEngine.GameObject go, string scriptName, string[] funcNameArr, LuaFunction[] funcArr) {
+            if (funcArr.Length == 0) {
+                Log.Warn ("[AddLuaBehaviour] callback is null");
+                return null;
+            }
+            LuaMonoBehaviour scriptObj;
+            LuaMonoBehaviour[] scriptArray = go.GetComponents<LuaMonoBehaviour> ();
+            for (int idx = 0; idx < scriptArray.Length; idx++) {
+                scriptObj = scriptArray[idx];
+                if (scriptObj.DisplayName == scriptName) {
+                    Log.Warn ("[AddLuaBehaviour] 要添加脚本名字已经存在");
+                    // return null;
+                    GameObject.Destroy (scriptObj);
+                }
+            }
+
+            scriptObj = go.AddComponent<LuaMonoBehaviour> ();
+            scriptObj.InitLuaBehaviour (funcNameArr, funcArr, scriptName);
+            return scriptObj;
         }
     }
 }

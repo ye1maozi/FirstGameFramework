@@ -3,6 +3,7 @@ require "Common/functions"
 require "Common/LuaUtil"
 local ManagerCenter = require "Common/ManagerCenter"
 
+---@type LevelManager
 local levelMgr = nil
 local ctrlMgr = nil
 local adapterMgr = nil
@@ -196,7 +197,7 @@ end
 function Main.AddMsgItem(storyid, pageid, dlgid)
 	local battleCtrl = ctrlMgr:GetCtrl(UiNames.Battle)
 	if battleCtrl ~= nil then
-		battleCtrl:AddMsgItem(storyid, pageid, dlgid)
+		--battleCtrl:AddMsgItem(storyid, pageid, dlgid)
 	end
 end
 

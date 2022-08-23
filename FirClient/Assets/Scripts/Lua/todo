@@ -1,0 +1,30 @@
+* 逻辑全lua
+* 已有battleScene修改为自己逻辑
+* 独立战斗逻辑
+* 战斗作为一个全屏panel 不切换场景
+
+
+流程
+* login
+* main
+    top
+    center
+    bottom
+* battle
+
+
+main.lua
+OnInitOK
+
+
+StartLogin
+levelMgr:LoadLevel(LevelType.Main)
+loaderCtrl:InitLoader(function ()
+			LuaHelper.LoadLevel(levelType, self, self.OnLeaveLevel, self.OnEnterLevel)
+		end)
+	Main.ShowUI(UiNames.Loader) loaderCallback
+
+-LevelManager:OnEnterLevel
+	MainAdapter:OnEnterLevel
+	-InitBeginPlay
+	--MainAdapter:EnterScene(mapid, action)

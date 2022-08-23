@@ -1,3 +1,4 @@
+---@class LoginAdapter
 local LoginAdapter = class("LoginAdapter")
 
 function LoginAdapter:OnEnterLevel(execOK)

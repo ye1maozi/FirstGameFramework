@@ -26,6 +26,7 @@ function ManagerCenter:Initialize()
 	self:AddManager(ManagerNames.Handler, require "Manager.HandlerManager", true)
 	self:AddManager(ManagerNames.RedDot, require "Manager.RedDotManager", true)
 	self:AddManager(ManagerNames.Event, require "Manager.EventManager")
+	self:AddManager("Behavior",require("Manager.BehaviorManager"),true)
 
 	logWarn('ManagerCenter:InitializeOK...')
 end

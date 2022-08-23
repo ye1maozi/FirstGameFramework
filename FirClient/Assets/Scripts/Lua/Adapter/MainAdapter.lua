@@ -22,7 +22,9 @@ function MainAdapter:OnEnterLevel(action)
 	if action ~= nil then
 		execAction(action)
 	end
-	LuaHelper.InitBeginPlay(4000)	--初始化服务器数据-
+	--LuaHelper.InitBeginPlay(4000)	--初始化服务器数据-
+
+	self.OnEnterLevelOK()
 end
 
 --执行批次任务--
