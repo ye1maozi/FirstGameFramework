@@ -160,6 +160,7 @@ public static class LuaBinder
 		L.BeginModule("Utility");
 		FirClient_Utility_UtilWrap.Register(L);
 		FirClient_Utility_LuaHelperWrap.Register(L);
+		FirClient_Utility_LuaMonoBehaviourWrap.Register(L);
 		L.EndModule();
 		L.BeginModule("Behaviour");
 		FirClient_Behaviour_LuaBehaviourWrap.Register(L);
